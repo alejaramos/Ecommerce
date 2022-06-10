@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductCard from '../ProductCard/ProductCard';
-import { useGlobalContext } from '/home/mgonidev/Desktop/BierfassV2/bierfass/src/context/globalUserContext.js';
+import { useGlobalContext } from '../../context/globalUserContext'
 
 const Search = () => {
   const { productSearch } = useGlobalContext();

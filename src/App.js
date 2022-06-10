@@ -15,7 +15,6 @@ import Login from "./components/Login/Login";
 import Product from "./components/Product/Product";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { GlobalProvider } from "./context/globalUserContext";
-import ReCAPTCHA from "react-google-recaptcha";
 import NewReview from "./components/NewReview/NewReview.jsx";
 
 function App() {

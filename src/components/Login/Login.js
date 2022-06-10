@@ -27,7 +27,7 @@ const Login = () => {
     }
 
     axios
-      .post('/login', {
+      .post("http://localhost:3000/api/users/login", {
         email: email,
         password: password,
       })
@@ -37,7 +37,6 @@ const Login = () => {
     navigate('/me');
   };
 
-  // const handleBlur
 
   return (
     <div class="container">

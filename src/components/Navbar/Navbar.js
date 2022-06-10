@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useGlobalContext } from '/home/mgonidev/Desktop/BierfassV2/bierfass/src/context/globalUserContext.js';
+import { useGlobalContext } from '../../context/globalUserContext'
 import './Navbar.css';
 
 const Navbar = () => {

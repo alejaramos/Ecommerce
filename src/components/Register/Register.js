@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+
 
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -13,10 +14,17 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
 
+  //validation
+
+  
+
+
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("/register", {
+      .post("http://localhost:3000/api/users/register", {
         firstName: firstName,
         lastName: lastName,
         password: password,
@@ -29,6 +37,8 @@ const Register = () => {
       });
     navigate("/login");
   };
+
+  
 
 
   return (
@@ -67,13 +77,13 @@ const Register = () => {
           </div>
 
           <div class="form-group col-md-6 pb-3">
-            <label for="birthdayDate" class="form-label">
+            <label for="bday" class="form-label">
               Fecha de Nacimiento
             </label>
             <input
-              type="text"
+              type="date"
               class="form-control"
-              id="birthdayDate"
+              id="bday"
               placeholder="fecha de nacimiento"
               value={birthday}
               onChange={(e) => setBirthday(e.target.value)}
@@ -105,10 +115,13 @@ const Register = () => {
               class="form-control"
               id="Password"
               placeholder="contraseña"
-              value={password}
+              // value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+
+             
             />
+        
           </div>
 
           <div class="form-group col-md-6 pb-3">
@@ -123,7 +136,13 @@ const Register = () => {
               value={confPassword}
               onChange={(e) => setConfPassword(e.target.value)}
               required
+
+              
+
+              
+
             />
+          
           </div>
 
           <button type="submit" class="btn btn-primary">

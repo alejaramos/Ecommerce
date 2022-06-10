@@ -24,7 +24,7 @@ User.init({
       type: DataTypes.BOOLEAN
   },
   birthDay: {
-    type: DataTypes.DATE,
+    type: DataTypes.STRING,
   },
   email: {
     type: DataTypes.STRING,
